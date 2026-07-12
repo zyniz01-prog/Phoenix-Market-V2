@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akun Saya | Phoenix Market</title>
+  <link rel="stylesheet" href="css/style5.css?v=7">
+</head>
+
+<body>
+  <header>
+    <h1 class="e-nama">Phoenix Market</h1>
+    <nav>
+      <a href="index.html">Keluar</a>
+      <a href="IT-II-ZynXiz-Beranda.html">Beranda</a>
+      <a href="IT-II-ZynXiz-Produk.html">Produk</a>
+      <a href="IT-II-ZynXiz-Keranjang.html">Keranjang <span id="cartBadge">0</span></a>
+    </nav>
+  </header>
+  <main class="account-wrapper">
+    <section class="account-hero">
+      <div id="accountInitial" class="account-avatar">P</div>
+      <div>
+        <p class="account-kicker">Profil Saya</p>
+        <h1 id="accountName">Pengguna</h1>
+        <p id="accountRole">User</p>
+      </div>
+    </section>
+
+    <section id="userAccountPanel">
+      <div class="account-section-title">
+        <h2>Pesanan Saya</h2><a href="IT-II-ZynXiz-RiwayatPesanan.html">Lihat Riwayat Pesanan →</a>
+      </div>
+      <div class="order-status-grid">
+        <div><strong id="accountWaiting">0</strong><span>Belum Bayar</span></div>
+        <div><strong id="accountProcessing">0</strong><span>Dikemas</span></div>
+        <div><strong id="accountShipping">0</strong><span>Dikirim</span></div>
+        <div><strong id="accountFinished">0</strong><span>Selesai</span></div>
+      </div>
+      <section class="account-orders">
+        <h2>Pesanan Terbaru</h2>
+        <div id="accountOrderList"></div><a class="account-history-button" href="IT-II-ZynXiz-RiwayatPesanan.html">Buka
+          semua riwayat pesanan</a>
+      </section>
+    </section>
+
+    <section id="adminAccountPanel" hidden>
+      <div class="account-section-title">
+        <h2>Ringkasan Admin</h2><a href="IT-II-ZynXiz-Admin.html">Buka Dashboard Admin →</a>
+      </div>
+      <div class="order-status-grid admin-stat-grid">
+        <div><strong id="accountProductTotal">0</strong><span>Produk Aktif</span></div>
+        <div><strong id="accountOrderTotal">0</strong><span>Total Pesanan</span></div>
+        <div><strong id="accountRevenueTotal">Rp0</strong><span>Pendapatan</span></div>
+      </div>
+      <section class="admin-shortcuts"><a href="IT-II-ZynXiz-AdminProduk.html" class="btn-buy">Kelola Produk &
+          Stok</a><a href="IT-II-ZynXiz-AdminPesanan.html" class="btn-b">Kelola Pesanan</a></section>
+    </section>
+  </main>
+  <script src="js/phoenix-app.js?v=34"></script>
+</body>
+
+</html>
