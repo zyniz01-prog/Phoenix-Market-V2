@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Produk | Phoenix Market</title>
+    <link rel="stylesheet" href="css/style4.css?v=12">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHOENIX123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PHOENIX123');
+    </script>
+</head>
+
+<body class="produk-page">
+
+    <header>
+        <h1 class="e-nama">Phoenix Market</h1>
+        <nav>
+            <a href="index.html">Keluar</a>
+            <a href="IT-II-ZynXiz-Beranda.html">Beranda</a>
+            <a href="IT-II-ZynXiz-Produk.html" style="color: var(--Utama);">Produk</a><a
+                href="IT-II-ZynXiz-Favorit.html">Favorit</a>
+            <a href="IT-II-ZynXiz-Keranjang.html">Keranjang <span id="cartBadge">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-title">
+            <h1>Koleksi Produk</h1>
+            <p>Temukan gadget dan aksesoris terbaik di Phoenix Market.</p>
+        </div>
+
+        <div class="filter-container">
+            <input id="searchProduct" class="btn-filter input-filter" type="search" placeholder="Cari produk...">
+
+            <select id="categoryFilter" class="btn-filter">
+                <option>Semua</option>
+                <option>Gadget</option>
+                <option>Elektronik</option>
+                <option>Aksesoris</option>
+            </select>
+
+            <select id="priceFilter" class="btn-filter" hidden aria-hidden="true">
+                <option>Semua</option>
+                <option>Murah</option>
+                <option>Menengah</option>
+                <option>Premium</option>
+            </select>
+
+            <select id="sortProduct" class="btn-filter" aria-label="Urutkan produk">
+                <option value="default">Urutkan: Default</option>
+                <option value="low">Harga: Terendah</option>
+                <option value="high">Harga: Tertinggi</option>
+                <option value="stock">Stok Terbanyak</option>
+            </select>
+            <label class="btn-filter stock-filter"><input id="stockAvailable" type="checkbox"> Stok tersedia</label>
+
+            <button id="resetFilter" class="btn-filter" type="button">Reset</button>
+        </div>
+
+        <p id="emptyProduct" class="empty-state" hidden>Produk tidak ditemukan.</p>
+
+        <div class="produk-container" id="productGrid">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Phoenix Market</h3>
+                <p>Marketplace gadget dan elektronik untuk kebutuhan digital modern.</p>
+            </div>
+
+            <div>
+                <h3>Navigasi</h3>
+                <p>
+                    <a href="IT-II-ZynXiz-Beranda.html">Beranda</a><br>
+                    <a href="IT-II-ZynXiz-Produk.html">Produk</a><br>
+                    <a href="IT-II-ZynXiz-Keranjang.html">Keranjang</a><br>
+                    <a href="IT-II-ZynXiz-Admin.html">Admin</a>
+                </p>
+            </div>
+
+            <div>
+                <h3>Hubungi Kami</h3>
+                <p>Email: info@MyPhoenix.com<br>WA: 0821-1528-7095</p>
+            </div>
+        </div>
+
+        <p>&copy; 2026 Phoenix Market. All Rights Reserved.</p>
+    </footer>
+
+    <div id="productModal" class="product-modal" hidden>
+        <div class="modal-backdrop" onclick="closeDetail()"></div>
+
+        <article class="modal-content">
+            <button class="modal-close" type="button" onclick="closeDetail()">X</button>
+
+            <img id="modalImage" src="" alt="Detail produk">
+            <small id="modalCategory"></small>
+            <h2 id="modalName"></h2>
+            <p id="modalDescription"></p>
+            <section class="specification-section">
+                <h3>Spesifikasi Singkat</h3>
+                <ul id="modalSpecifications"></ul>
+            </section>
+            <h3 id="modalPrice"></h3>
+            <p id="modalStock" class="stock-label"></p>
+
+            <button id="modalAddCart" class="btn-buy" type="button">
+                Tambah ke Keranjang
+            </button>
+
+            <section class="review-section">
+                <h3>Ulasan Produk</h3>
+                <div id="reviewList">
+                    <article class="review-item"><strong>Raka</strong> <span>★★★★★</span>
+                        <p>Produknya sesuai deskripsi dan kualitasnya sangat bagus.</p><small>12/07/2026</small>
+                    </article>
+                    <article class="review-item"><strong>Dina</strong> <span>★★★★★</span>
+                        <p>Pengiriman cepat dan packing aman.</p><small>10/07/2026</small>
+                    </article>
+                    <article class="review-item"><strong>Arif</strong> <span>★★★★☆</span>
+                        <p>Tampilannya premium dan berfungsi dengan baik.</p><small>08/07/2026</small>
+                    </article>
+                    <article class="review-item"><strong>Salsa</strong> <span>★★★★★</span>
+                        <p>Sangat puas berbelanja di Phoenix Market.</p><small>05/07/2026</small>
+                    </article>
+                </div>
+                <form id="reviewForm">
+                    <input id="reviewProductId" type="hidden">
+                    <input class="checkout-input" id="reviewName" type="text" placeholder="Nama kamu" required>
+                    <select class="checkout-input" id="reviewRating" required>
+                        <option value="">Pilih rating</option>
+                        <option value="5">5 - Sangat puas</option>
+                        <option value="4">4 - Puas</option>
+                        <option value="3">3 - Cukup</option>
+                        <option value="2">2 - Kurang</option>
+                        <option value="1">1 - Tidak puas</option>
+                    </select>
+                    <textarea class="checkout-input" id="reviewComment" placeholder="Tulis ulasan kamu"
+                        required></textarea>
+                    <button class="btn-detail" type="submit">Kirim Ulasan</button>
+                </form>
+            </section>
+        </article>
+    </div>
+    <a class="whatsapp-float"
+        href="https://wa.me/6282115287095?text=Halo%20Phoenix%20Market%2C%20saya%20ingin%20bertanya." target="_blank"
+        rel="noopener" aria-label="Hubungi Phoenix Market via WhatsApp"><img src="images/whatsapp-phoenix.jpeg"
+            alt="WhatsApp Phoenix Market"></a>
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Kembali ke atas">↑</button>
+
+    <script src="js/phoenix-app.js?v=36"></script>
+
+</body>
+
+</html>
