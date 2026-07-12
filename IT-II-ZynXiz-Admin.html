@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin | Phoenix Market</title>
+  <link rel="stylesheet" href="css/style5.css?v=13">
+</head>
+
+<body class="admin-theme">
+  <header>
+    <h1 class="e-nama">Phoenix Admin</h1>
+    <nav><a href="IT-II-ZynXiz-AdminProduk.html">Produk & Stok</a><a href="IT-II-ZynXiz-AdminPesanan.html">Pesanan <span
+          id="newOrderBadge" class="new-order-badge" hidden>0</span></a><a href="IT-II-ZynXiz-Akun.html">Akun
+        Admin</a><a href="index.html">Keluar</a></nav>
+  </header>
+  <main class="cart-wrapper admin-dashboard">
+    <div class="page-title">
+      <p class="account-kicker">Panel Admin</p>
+      <h1>Dashboard Admin</h1>
+      <p>Pantau toko dan lanjutkan ke halaman pengelolaan yang diperlukan.</p>
+    </div>
+    <section class="produk-container dashboard-stats">
+      <article class="card summary-card"><small>Produk Aktif</small>
+        <h3 id="adminProductCount">0 Produk</h3>
+        <p>Produk dalam katalog</p>
+      </article>
+      <article class="card summary-card"><small>Total Pesanan</small>
+        <h3 id="adminOrderCount">0 Pesanan</h3>
+        <p>Pesanan yang tercatat</p>
+      </article>
+      <article class="card summary-card"><small>Pendapatan</small>
+        <h3 id="adminRevenue">Rp0</h3>
+        <p>Estimasi penjualan</p>
+      </article>
+      <article class="card summary-card"><small>Pesanan Selesai</small>
+        <h3 id="adminCompletedCount">0</h3>
+        <p>Transaksi berhasil</p>
+      </article>
+      <article class="card summary-card"><small>Pelanggan Aktif</small>
+        <h3 id="adminCustomerCount">0</h3>
+        <p>Pembeli tercatat</p>
+      </article>
+    </section>
+    <section class="admin-insights">
+      <article class="card">
+        <h2>Penjualan 7 Hari Terakhir</h2>
+        <div id="adminSalesChart" class="sales-chart"></div>
+      </article>
+      <article class="card">
+        <h2>Stok Hampir Habis</h2>
+        <div id="adminLowStock"></div>
+      </article>
+    </section>
+    <section class="admin-hub">
+      <a class="admin-hub-card" href="IT-II-ZynXiz-AdminProduk.html"><span>📦</span>
+        <h2>Kelola Produk & Stok</h2>
+        <p>Tambah, ubah, hapus produk tambahan, dan atur jumlah stok seluruh katalog.</p><strong>Buka pengelolaan
+          →</strong>
+      </a>
+      <a class="admin-hub-card" href="IT-II-ZynXiz-AdminPesanan.html"><span>🚚</span>
+        <h2>Kelola Status Pesanan</h2>
+        <p>Lihat detail pesanan pelanggan dan perbarui status pengiriman.</p><strong>Buka pesanan →</strong>
+      </a>
+    </section>
+  </main>
+  <footer>
+    <p>Dashboard Admin Phoenix Market</p>
+    <p>&copy; 2026 Phoenix Market. All Rights Reserved.</p>
+  </footer>
+  <script src="js/phoenix-app.js?v=29"></script>
+</body>
+
+</html>
