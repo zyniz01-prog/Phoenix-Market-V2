@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Market</title>
+  <link rel="stylesheet" href="css/style2.css?v=16">
+</head>
+
+<body>
+  <div id="pageLoader" class="page-loader"><img src="images/pngegg.png" alt="Phoenix"><strong>PHOENIX MARKET</strong>
+  </div>
+  <main class="container">
+    <header class="landing-nav"><a class="brand" href="#"><img src="images/pngegg.png" alt="Logo Phoenix"><span>PHOENIX
+          MARKET</span></a>
+      <nav><button type="button" onclick="openLoginChoice()">MASUK</button><button type="button"
+          onclick="openBenefits()">KEUNGGULAN</button></nav>
+    </header>
+    <section class="landing-hero">
+      <img class="hero-background" src="images/phoenix-energy-hero.jpeg?v=2" alt="" aria-hidden="true">
+      <img class="hero-gadgets" src="images/phoenix-gadget-solid.jpeg?v=1" alt="Koleksi gadget Phoenix Market">
+      <div class="hero-copy">
+        <p class="eyebrow">RISE WITH POWER.</p>
+        <h1>PREMIUM<br>GADGETS</h1>
+        <h2>UNTUK GAYA HIDUPMU</h2>
+        <p>Temukan gadget pilihan dengan teknologi terbaik, harga kompetitif, dan pengalaman belanja yang aman.</p>
+      </div>
+    </section>
+    <section class="landing-benefits">
+      <div><strong>✓</strong><span>100% Original<small>Produk pilihan</small></span></div>
+      <div><strong>✓</strong><span>Garansi Resmi<small>Belanja lebih tenang</small></span></div>
+      <div><strong>✓</strong><span>Pengiriman Cepat<small>Siap dikirim</small></span></div>
+      <div><strong>✓</strong><span>Pembayaran Aman<small>QRIS, Bank & E-Wallet</small></span></div>
+    </section>
+  </main>
+  <div id="loginChoiceModal" class="login-modal" hidden>
+    <div class="login-backdrop" onclick="closeLoginChoice()"></div>
+    <section class="login-card choice-card"><button class="login-close" type="button"
+        onclick="closeLoginChoice()">×</button>
+      <h2>Pilih Akses</h2>
+      <p>Masuk sebagai pengguna untuk berbelanja, atau sebagai Admin untuk mengelola toko.</p><button class="f-enter"
+        type="button" onclick="openLogin('user');closeLoginChoice()">Masuk sebagai User</button><button
+        class="f-enter secondary" type="button" onclick="openLogin('admin');closeLoginChoice()">Masuk sebagai
+        Admin</button>
+    </section>
+  </div>
+  <div id="benefitModal" class="login-modal" hidden>
+    <div class="login-backdrop" onclick="closeBenefits()"></div>
+    <section class="login-card benefit-card"><button class="login-close" type="button"
+        onclick="closeBenefits()">×</button>
+      <h2>Keunggulan Phoenix Market</h2>
+      <div class="benefit-list">
+        <p><strong>Produk Pilihan</strong><span>Gadget modern untuk belajar, kerja, dan hiburan.</span></p>
+        <p><strong>Pembayaran Fleksibel</strong><span>Tersedia QRIS, transfer bank, serta E-Wallet.</span></p>
+        <p><strong>Pesanan Terpantau</strong><span>Riwayat dan status pesanan tersimpan di akunmu.</span></p>
+      </div>
+    </section>
+  </div>
+  <div id="loginModal" class="login-modal" hidden>
+    <div class="login-backdrop" onclick="closeLogin()"></div>
+    <section class="login-card" aria-labelledby="loginTitle"><button class="login-close" type="button"
+        onclick="closeLogin()">×</button>
+      <h2 id="loginTitle">Masuk ke Akun</h2>
+      <p id="loginHint">Silakan masukkan akun untuk melanjutkan.</p>
+      <form id="loginForm" autocomplete="off"><input id="loginRole" type="hidden" value="user"><label
+          for="loginUsername">Username atau email</label><input id="loginUsername" type="text"
+          placeholder="Masukkan nama akun" required><label for="loginPassword">Password</label>
+        <div class="password-field"><input id="loginPassword" type="password" placeholder="Masukkan password"
+            required><button id="togglePassword" type="button" aria-label="Tampilkan password">&#128065;</button></div>
+        <button class="f-enter" type="submit">Login</button>
+        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+      </form>
+      <small id="loginHelp">User dapat memakai akun bebas dengan password minimal 4 karakter.</small>
+    </section>
+  </div>
+  <script src="js/login.js?v=8"></script>
+</body>
+
+</html>
