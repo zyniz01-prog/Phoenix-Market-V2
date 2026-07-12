@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang | Phoenix Market</title>
+    <link rel="stylesheet" href="css/style5.css?v=14">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHOENIX123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PHOENIX123');
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="e-nama">Phoenix Market</h1>
+        <nav>
+            <a href="index.html">Keluar</a>
+            <a href="IT-II-ZynXiz-Beranda.html">Beranda</a>
+            <a href="IT-II-ZynXiz-Produk.html">Produk</a><a href="IT-II-ZynXiz-Favorit.html">Favorit</a>
+            <a href="IT-II-ZynXiz-Keranjang.html" class="active" style="color: var(--Utama);">Keranjang <span
+                    id="cartBadge">0</span></a>
+        </nav>
+    </header>
+
+    <main class="cart-wrapper">
+        <div class="page-title">
+            <h1>Keranjang</h1>
+        </div>
+
+        <section class="cart-layout">
+            <div class="cart-list" id="cartItems"></div>
+
+            <aside class="cart-summary-side">
+                <article class="card summary-card">
+                    <small>Ringkasan Belanja</small>
+                    <h3>Total Pembayaran</h3>
+
+                    <p>Subtotal: <span id="cartSubtotal">Rp0</span></p>
+                    <p>Admin: <span id="cartAdmin">Rp0</span></p>
+                    <p>Diskon: <span id="cartDiscount">Rp0</span></p>
+                    <p class="total-price">Total: <span id="cartTotal">Rp0</span></p>
+
+                    <div class="voucher-box">
+                        <div class="promo-list">
+                            <div class="promo-banner"><strong>HEMAT10</strong><span>Diskon 10% min. belanja
+                                    Rp1.000.000</span><button type="button" onclick="usePromoShortcut()">Gunakan
+                                    HEMAT10</button></div>
+                            <div class="promo-banner"><strong>WELCOME5</strong><span>Diskon 5% min. belanja
+                                    Rp500.000</span><button type="button" onclick="useWelcomePromo()">Gunakan
+                                    WELCOME5</button></div>
+                        </div>
+                        <label for="voucherCode">Kode Voucher</label>
+                        <div><input id="voucherCode" class="checkout-input" placeholder="Contoh: HEMAT10"><button
+                                class="btn-detail" type="button" onclick="applyVoucher()">Pakai</button></div>
+                        <small id="voucherMessage"></small>
+                    </div>
+
+                    <button class="btn-buy" type="button" onclick="openCheckoutModal()">Checkout Sekarang</button>
+                </article>
+            </aside>
+        </section>
+
+        <section class="order-history">
+            <h2>Riwayat Pesanan</h2>
+            <div id="customerOrderList"></div>
+        </section>
+    </main>
+
+    <div class="success-modal" id="successModal">
+        <div class="success-box">
+            <button class="success-close" onclick="closeSuccessModal()">x</button>
+            <h2>Pesanan Berhasil Dibuat!</h2>
+            <p>Terima kasih sudah berbelanja. Nomor pesananmu:</p>
+            <strong id="orderNumber">#PM000000</strong>
+            <p>Estimasi pengiriman 2-4 hari kerja. Detail pesanan sudah disimpan sebagai simulasi.</p>
+            <button class="btn-buy" onclick="closeSuccessModal()">Selesai</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Phoenix Market</h3>
+                <p>Marketplace gadget dan elektronik untuk kebutuhan digital modern.</p>
+            </div>
+
+            <div>
+                <h3>Navigasi</h3>
+                <p>
+                    <a href="IT-II-ZynXiz-Beranda.html">Beranda</a><br>
+                    <a href="IT-II-ZynXiz-Produk.html">Produk</a><br>
+                    <a href="IT-II-ZynXiz-Keranjang.html">Keranjang</a><br>
+                    <a href="IT-II-ZynXiz-Admin.html">Admin</a>
+                </p>
+            </div>
+
+            <div>
+                <h3>Hubungi Kami</h3>
+                <p>Email: info@MyPhoenix.com<br>WA: 0821-1528-7095</p>
+            </div>
+        </div>
+
+        <p>&copy; 2026 Phoenix Market. All Rights Reserved.</p>
+    </footer>
+
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-popup">
+            <button class="checkout-close" onclick="closeCheckoutModal()">x</button>
+
+            <h2>Checkout</h2>
+            <div class="checkout-progress"><span class="active">1. Keranjang</span><span class="active">2.
+                    Pengiriman</span><span>3. Pembayaran</span><span>4. Selesai</span></div>
+
+            <form id="checkoutForm" class="checkout-popup-layout" autocomplete="off">
+                <div class="checkout-left">
+                    <h3>Informasi Pengiriman</h3>
+
+                    <div class="form-row">
+                        <input class="checkout-input" type="text" id="nama" name="checkout_nama"
+                            placeholder="Nama lengkap" autocomplete="new-password" required>
+                        <input class="checkout-input" type="tel" id="telepon" name="checkout_telepon"
+                            placeholder="Nomor telepon" autocomplete="new-password" required>
+                    </div>
+
+                    <textarea class="checkout-input" id="alamat" name="checkout_alamat" placeholder="Alamat lengkap"
+                        autocomplete="new-password" required></textarea>
+
+                    <div class="form-row">
+                        <input class="checkout-input" type="text" id="kota" name="checkout_kota"
+                            placeholder="Kota / Kabupaten" autocomplete="new-password" required>
+                        <input class="checkout-input" type="text" id="kodepos" name="checkout_kodepos"
+                            placeholder="Kode pos" autocomplete="new-password" required>
+                    </div>
+
+                    <h3>Metode Pembayaran</h3>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="E-Wallet" onchange="selectPaymentInfo()" required>
+                        <span>E-Wallet (DANA / GoPay / OVO)</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="Transfer Bank" onchange="selectPaymentInfo()"
+                            required>
+                        <span>Transfer Bank (BCA / BRI / Mandiri)</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="QRIS" onchange="selectPaymentInfo()" required>
+                        <span>QRIS</span>
+                    </label>
+
+                    <div id="paymentInfo" class="payment-info" hidden></div>
+
+                    <h3>Metode Pengiriman</h3>
+                    <label class="payment-option"><input type="radio" name="shipping" value="Reguler" checked
+                            onchange="selectShippingInfo()"><span>Reguler — Estimasi 2–4 hari kerja</span></label>
+                    <label class="payment-option"><input type="radio" name="shipping" value="Express"
+                            onchange="selectShippingInfo()"><span>Express — Estimasi 1–2 hari kerja</span></label>
+                    <div id="shippingInfo" class="payment-info">Pengiriman reguler: estimasi tiba 2–4 hari kerja.</div>
+
+                    <p id="checkoutMessage" class="fee-text"></p>
+                </div>
+
+                <aside class="checkout-right">
+                    <h3>Ringkasan Pesanan</h3>
+                    <p>Subtotal: <span id="modalSubtotal">Rp0</span></p>
+                    <p>Admin: <span id="modalAdmin">Rp0</span></p>
+                    <p>Diskon: <span id="modalDiscount">Rp0</span></p>
+                    <p class="total-price">Total: <span id="modalTotal">Rp0</span></p>
+                </aside>
+
+                <div class="checkout-actions">
+                    <button class="btn-b" type="button" onclick="closeCheckoutModal()">Kembali ke Keranjang</button>
+                    <button class="btn-buy" type="submit">Bayar Sekarang</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/phoenix-app.js?v=38"></script>
+
+</body>
+
+</html>
