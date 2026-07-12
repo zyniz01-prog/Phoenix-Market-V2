@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Pesanan | Phoenix Admin</title>
+  <link rel="stylesheet" href="css/style5.css?v=10">
+</head>
+
+<body class="admin-theme">
+  <header>
+    <h1 class="e-nama">Phoenix Admin</h1>
+    <nav><a href="IT-II-ZynXiz-Admin.html">Dashboard</a><a href="IT-II-ZynXiz-AdminProduk.html">Produk & Stok</a><a
+        href="IT-II-ZynXiz-Akun.html">Akun Admin</a><a href="index.html">Keluar</a></nav>
+  </header>
+  <main class="cart-wrapper">
+    <div class="page-title">
+      <p class="account-kicker">Manajemen Transaksi</p>
+      <h1>Pesanan Pelanggan</h1>
+      <p>Perbarui status dari menunggu pembayaran sampai pesanan selesai.</p><button class="btn-buy" type="button"
+        onclick="exportOrdersCSV()">Export CSV</button>
+    </div>
+    <section class="admin-orders-wrap">
+      <article class="card summary-card"><small>Pesanan Masuk</small>
+        <h2>Status Pesanan</h2>
+        <div id="adminOrderList"></div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>Dashboard Admin Phoenix Market</p>
+  </footer>
+  <script src="js/phoenix-app.js?v=25"></script>
+</body>
+
+</html>
