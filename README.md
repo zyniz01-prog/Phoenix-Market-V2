@@ -91,9 +91,9 @@ Folder dokumentasi: [`Scrennshotsv2`](Scrennshotsv2)
 
 ## Deployment dan Demo
 
-- Repository: <https://github.com/zyniz01-prog/Phoenix-Market>
-- GitHub Pages: <https://zyniz01-prog.github.io/Phoenix-Market/>
-- Video demo: <https://youtu.be/r0f2sGhc2fE?si=Hk3QTdp_uioKxNKP>
+- Repository: <https://zyniz01-prog.github.io/Phoenix-Market-V2/>
+- GitHub Pages: <https://github.com/zyniz01-prog/Phoenix-Market-V2>
+- Video demo: <>
 
 ## Kesimpulan
 
