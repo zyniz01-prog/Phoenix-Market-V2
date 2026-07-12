@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk & Stok | Phoenix Admin</title>
+  <link rel="stylesheet" href="css/style5.css?v=10">
+</head>
+
+<body class="admin-theme">
+  <header>
+    <h1 class="e-nama">Phoenix Admin</h1>
+    <nav><a href="IT-II-ZynXiz-Admin.html">Dashboard</a><a href="IT-II-ZynXiz-AdminPesanan.html">Pesanan</a><a
+        href="IT-II-ZynXiz-Akun.html">Akun Admin</a><a href="index.html">Keluar</a></nav>
+  </header>
+  <main class="cart-wrapper">
+    <div class="page-title">
+      <p class="account-kicker">Manajemen Katalog</p>
+      <h1>Produk & Stok</h1>
+      <p>Tambahkan produk baru, edit produk tambahan, serta atur stok semua produk.</p>
+    </div>
+    <section class="produk-container admin-grid">
+      <article class="card summary-card"><small>Produk Baru</small>
+        <h3>Tambah Produk</h3>
+        <p>Buat produk baru untuk ditampilkan di katalog toko.</p><button class="btn-buy" type="button"
+          onclick="openAdminProductModal()">+ Tambah Produk</button>
+      </article>
+      <article class="card summary-card admin-product-panel"><small>Daftar Katalog</small>
+        <h3>Stok & Produk</h3>
+        <div id="adminProductList"></div>
+      </article>
+    </section>
+  </main>
+  <div id="adminProductModal" class="admin-product-modal" hidden>
+    <div class="modal-backdrop" onclick="closeAdminProductModal()"></div>
+    <section class="admin-product-popup"><button class="modal-close" type="button"
+        onclick="closeAdminProductModal()">×</button><small>Form Produk</small>
+      <h2 id="adminFormTitle">Tambah Produk</h2>
+      <form id="adminProductForm" autocomplete="off"><input type="hidden" id="adminEditId"><input class="checkout-input"
+          type="text" id="adminProductName" placeholder="Nama produk" required><input class="checkout-input"
+          type="number" id="adminProductPrice" placeholder="Harga produk" min="0" required><input class="checkout-input"
+          type="number" id="adminProductStock" placeholder="Jumlah stok" min="0" required><select class="checkout-input"
+          id="adminProductCategory" required>
+          <option value="">Pilih kategori</option>
+          <option>Gadget</option>
+          <option>Elektronik</option>
+          <option>Aksesoris</option>
+        </select><input class="checkout-input" type="file" id="adminProductImage" accept="image/*"><img
+          id="previewImage" src="images/pngegg.png" alt="Preview Gambar"><textarea class="checkout-input"
+          id="adminProductDescription" placeholder="Deskripsi produk" rows="4" required></textarea><button
+          class="btn-buy" type="submit">Simpan Produk</button></form>
+    </section>
+  </div>
+  <footer>
+    <p>Dashboard Admin Phoenix Market</p>
+  </footer>
+  <script src="js/phoenix-app.js?v=29"></script>
+</body>
+
+</html>
