@@ -42,6 +42,77 @@ Phoenix Market adalah prototype website e-commerce bertema gadget dan elektronik
 - Pembayaran, QRIS, WhatsApp, resi, dan dashboard adalah simulasi untuk demo; tidak terhubung ke gateway pembayaran atau kurir sungguhan.
 - Produk bawaan katalog tidak dapat dihapus dari Admin. Hapus produk hanya berlaku untuk produk tambahan yang dibuat melalui form Admin.
 
+## Business Overview
+
+### Nama Bisnis, Deskripsi, dan Value Proposition
+
+**Phoenix Market** adalah bisnis e-commerce B2C yang berfokus pada gadget, elektronik, dan aksesoris untuk kebutuhan belajar, bekerja, hiburan, gaming, dan rumah tangga modern. Value proposition Phoenix Market adalah pengalaman belanja teknologi yang lebih fokus dan mudah dipahami: visual produk yang menarik, informasi stok yang jelas, katalog yang dapat difilter, promo transparan, serta alur checkout sederhana.
+
+### Target Market dan Segmentasi Pelanggan
+
+- **Pelajar dan mahasiswa:** membutuhkan laptop, tablet, earphone, dan aksesoris dengan harga yang jelas untuk kegiatan belajar.
+- **Pekerja dan profesional:** mencari perangkat produktivitas seperti laptop, smartphone, headphone, dan monitor.
+- **Gamer dan kreator konten:** membutuhkan mouse gaming, headset, kamera, tablet, dan perangkat pendukung lain.
+- **Keluarga modern:** membutuhkan elektronik rumah tangga seperti Smart TV, AC, atau kulkas.
+- **Pelanggan baru:** tertarik pada penawaran awal seperti voucher `WELCOME5` dan edukasi produk yang ringkas.
+
+### Analisis Pasar dan Kompetitor
+
+Permintaan produk teknologi terus relevan karena perangkat digital digunakan untuk pendidikan, kerja, hiburan, komunikasi, dan kebutuhan rumah. Pelanggan umumnya membandingkan harga, spesifikasi, ketersediaan stok, keamanan pembayaran, serta kecepatan pengiriman sebelum membeli.
+
+Kompetitor utama berada pada dua kelompok: marketplace besar seperti Tokopedia, Shopee, dan Lazada; serta toko elektronik lokal. Phoenix Market membedakan diri sebagai katalog teknologi yang lebih terkurasi, memiliki tampilan bertema kuat, informasi produk yang ringkas, dan alur demo belanja yang sederhana.
+
+### Strategi Manajemen Produk dan Katalog
+
+Produk dikelompokkan ke dalam kategori **Gadget**, **Elektronik**, dan **Aksesoris**. Setiap produk memiliki nama, harga, gambar, kategori, deskripsi, rating, dan stok. Kartu produk menggunakan visual yang konsisten dan menampilkan badge seperti gratis ongkir, garansi resmi, serta status stok agar pelanggan dapat mengambil keputusan lebih cepat.
+
+Admin dapat menambah produk, memperbarui stok, dan mengelola pesanan. Produk unggulan ditampilkan di Beranda, sementara katalog lengkap dapat dicari, difilter, dan diurutkan pada halaman Produk.
+
+### Model Bisnis dan Revenue Stream
+
+Phoenix Market menggunakan model **Business to Consumer (B2C)**, yaitu menjual produk secara langsung kepada pelanggan akhir. Sumber pendapatan yang direncanakan meliputi:
+
+- Margin penjualan gadget, elektronik, dan aksesoris.
+- Penjualan bundling, misalnya laptop dengan mouse atau headphone.
+- Promo musiman untuk meningkatkan jumlah transaksi.
+- Potensi kerja sama promosi dengan merek elektronik.
+- Potensi layanan tambahan, seperti garansi diperpanjang atau paket pengiriman cepat.
+
+### Strategi Harga, Promosi, dan Diskon
+
+Strategi harga dibuat kompetitif berdasarkan kategori dan nilai produk. Aksesoris memiliki harga yang lebih mudah dijangkau, sedangkan laptop, smartphone, dan tablet berada pada segmen premium. Program promosi pada prototype ini meliputi:
+
+- `HEMAT10`: diskon 10% dengan minimum belanja Rp1.000.000.
+- `WELCOME5`: diskon 5% dengan minimum belanja Rp500.000 untuk pelanggan baru.
+- Countdown promo dan notifikasi pembelian simulasi untuk memperkuat urgensi pembelian.
+- Badge gratis ongkir dan garansi resmi pada produk tertentu.
+
+### Checkout dan Simulasi Payment Gateway
+
+Checkout dilakukan secara bertahap: pelanggan mengisi alamat, memilih pengiriman Reguler atau Express, memilih metode pembayaran, lalu melihat ringkasan pesanan. Gateway yang dipilih untuk simulasi adalah **Midtrans dummy**, dengan tampilan opsi pembayaran seperti QRIS, virtual account, e-wallet, atau transfer bank.
+
+Pada versi prototype, QRIS hanya berupa gambar dan tidak memproses transaksi nyata. Setelah pesanan dibuat, sistem menampilkan nomor pesanan simulasi, opsi konfirmasi WhatsApp, riwayat pesanan, dan nomor resi simulasi untuk tracking.
+
+### Rencana SEO
+
+- Menggunakan judul halaman dan heading yang relevan dengan isi halaman.
+- Menyediakan nama produk, kategori, deskripsi, dan teks alternatif gambar yang jelas.
+- Membuat desain responsif agar nyaman diakses dari perangkat mobile.
+- Menjaga struktur URL dan nama file halaman tetap mudah dipahami.
+- Menambahkan konten FAQ, profil toko, kebijakan retur, serta informasi produk untuk meningkatkan relevansi halaman.
+
+### Rencana Keamanan dan Pemeliharaan
+
+Untuk versi produksi, data pelanggan dan transaksi harus dipindahkan dari `localStorage` ke backend dan database yang aman. Website perlu menggunakan HTTPS, validasi input di sisi server, autentikasi Admin yang kuat, pembatasan akses per peran, serta integrasi payment gateway resmi.
+
+Pemeliharaan rutin meliputi pembaruan katalog dan harga, pengecekan stok, penggantian gambar yang tidak tersedia, pengujian form checkout, pemeriksaan tampilan mobile, backup data, dan evaluasi keamanan dependensi atau layanan pihak ketiga.
+
+### Rencana Data Analytics untuk Pengambilan Keputusan
+
+Data analytics dapat digunakan untuk memantau jumlah pengunjung, produk paling sering dilihat, kata kunci pencarian, produk yang paling sering masuk keranjang atau favorit, penggunaan voucher, nilai transaksi rata-rata, dan tingkat checkout berhasil.
+
+Data tersebut dapat membantu menentukan produk unggulan, mengatur stok hampir habis, mengevaluasi efektivitas promo, memperbaiki halaman yang kurang menarik, serta menyusun rekomendasi produk dan kampanye pemasaran berikutnya.
+
 ## Struktur Proyek
 
 ```text
