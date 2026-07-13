@@ -20,7 +20,7 @@ Phoenix Market adalah prototype website e-commerce bertema gadget dan elektronik
 - Voucher `HEMAT10` untuk diskon 10% dengan minimum belanja Rp1.000.000 dan `WELCOME5` untuk diskon 5% dengan minimum belanja Rp500.000.
 - Checkout bertahap dengan alamat tersimpan, pilihan pengiriman Reguler/Express, estimasi tiba, dan metode pembayaran simulasi termasuk QRIS.
 - Konfirmasi pesanan melalui WhatsApp, riwayat pesanan, serta halaman pelacakan resi simulasi.
-- FAQ, profil toko, kontak WhatsApp, kebijakan pengembalian, countdown promo, dan notifikasi aktivitas pembelian simulasi.
+- FAQ, profil toko, kontak WhatsApp, kebijakan pengembalian, dan countdown promo.
 
 ## Fitur Admin
 
@@ -84,7 +84,7 @@ Strategi harga dibuat kompetitif berdasarkan kategori dan nilai produk. Aksesori
 
 - `HEMAT10`: diskon 10% dengan minimum belanja Rp1.000.000.
 - `WELCOME5`: diskon 5% dengan minimum belanja Rp500.000 untuk pelanggan baru.
-- Countdown promo dan notifikasi pembelian simulasi untuk memperkuat urgensi pembelian.
+- Countdown promo.
 - Badge gratis ongkir dan garansi resmi pada produk tertentu.
 
 ### Checkout dan Simulasi Payment Gateway
@@ -125,7 +125,11 @@ IT-II-Zyn/
 |-- IT-II-ZynXiz-Akun.html
 |-- IT-II-ZynXiz-Tracking.html
 |-- IT-II-ZynXiz-ProfilToko.html
-|-- IT-II-ZynXiz-Admin*.html
+|-- IT-II-ZynXiz-RiwayatPesanan.html
+|-- IT-II-ZynXiz-Admin.html
+|-- IT-II-ZynXiz-AdminPesanan.html
+|-- IT-II-ZynXiz-AdminProduk.html
+|-- 404.html
 |-- css/
 |-- js/
 |-- images/
