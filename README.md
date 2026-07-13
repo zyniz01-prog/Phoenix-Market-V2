@@ -93,7 +93,7 @@ Folder dokumentasi: [`Scrennshotsv2`](Scrennshotsv2)
 
 - Repository: <https://zyniz01-prog.github.io/Phoenix-Market-V2/>
 - GitHub Pages: <https://github.com/zyniz01-prog/Phoenix-Market-V2>
-- Video demo: <>
+- Video demo: <https://youtu.be/E4dY1WKmWOE?si=L4mXv8M26NecKSVV>
 
 ## Kesimpulan
 
